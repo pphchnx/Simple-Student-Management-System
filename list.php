@@ -23,7 +23,6 @@ if ($conn->connect_error) {
 // ===== Fetch Data =====
 $sql = "SELECT id, name, email, phone FROM students ORDER BY id DESC";
 $result = $conn->query($sql);
-?>
 
 <!DOCTYPE html>
 <html>
