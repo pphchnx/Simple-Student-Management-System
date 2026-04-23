@@ -1,19 +1,12 @@
 <?php
+// ===== Database Config =====
 $host = "127.0.0.1";
 $user = "root";
 $pass = "16112548";
 $db   = "student_db";
 
+// ===== Connect Database =====
 $conn = new mysqli($host, $user, $pass, $db);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-echo "Connected successfully";
-
-$conn->close();
-?>
 
 // Check connection
 if ($conn->connect_error) {
@@ -23,6 +16,7 @@ if ($conn->connect_error) {
 // ===== Fetch Data =====
 $sql = "SELECT id, name, email, phone FROM students ORDER BY id DESC";
 $result = $conn->query($sql);
+?>
 
 <!DOCTYPE html>
 <html>
